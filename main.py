@@ -5,6 +5,8 @@ from tilemap import *
 from settings import *
 from sprites import *
 
+# technically a change
+
 class Game:
     def __init__(self):
         pg.init()
@@ -24,7 +26,7 @@ class Game:
         self.players = pg.sprite.Group()
         self.walls = pg.sprite.Group()
         self.dirt = pg.sprite.Group()
-        
+
         for row, tiles in enumerate(self.map.data):
             for col, tile in enumerate(tiles):
                 if tile == '1':
@@ -97,6 +99,3 @@ while True:
     g.new()
     g.run()
     g.show_go_screen()
-
-
-
