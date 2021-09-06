@@ -24,8 +24,8 @@ class Game:
         # initialize all variables and do all the setup for a new game
         self.all_sprites = pg.sprite.Group()
         self.players = pg.sprite.Group()
+        self.enemies = pg.sprite.Group()
         self.walls = pg.sprite.Group()
-        self.dirt = pg.sprite.Group()
 
         for row, tiles in enumerate(self.map.data):
             for col, tile in enumerate(tiles):
@@ -35,8 +35,6 @@ class Game:
                     self.player = Player(self, col, row)
 
         self.camera = Camera(self.map.width, self.map.height)
-
-
 
     def run(self):
         # game loop - set self.playing = False to end the game
