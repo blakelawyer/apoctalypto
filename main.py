@@ -4,6 +4,7 @@ from os import path
 from tilemap import *
 from settings import *
 from sprites import *
+from battle import *
 
 # technically a change 2
 
@@ -83,6 +84,8 @@ class Game:
                     self.player.move(dy=-1)
                 if event.key == pg.K_DOWN:
                     self.player.move(dy=1)
+                if event.key == pg.K_SPACE:
+                    battle_sequence(self)
 
     def show_start_screen(self):
         pass
